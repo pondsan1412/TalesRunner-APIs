@@ -1,8 +1,3 @@
-# TalesRunner-APIs
-ได้เลย! นี่คือการสร้างเอกสาร (Documentation) สำหรับ API ของคุณ:
-
----
-
 ## API Documentation
 
 ### Base URL
@@ -122,6 +117,4 @@ http://127.0.0.1:8000/tr_api
 
 **Note:** All parameters are optional. If no parameters are provided, all characters will be returned.
 
----
 
-คุณสามารถเพิ่มรายละเอียดอื่น ๆ หรือปรับแต่งเอกสารตามความต้องการของคุณได้!
