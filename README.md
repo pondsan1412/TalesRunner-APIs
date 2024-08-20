@@ -1,5 +1,3 @@
-
-```markdown
 ## API Documentation
 
 Hello! Call me Satorn. I'm a Web Developer!
