@@ -110,7 +110,7 @@ async def root():
                         "name": "TalesRunner API",
                         "description": "This is an API for TalesRunner",
                         "version": "0.1.0",
-                        "Docs": "https://satorn.vercel.app/docs",
+                        "Docs": "https://github.com/pondsan1412/TalesRunner-APIs",
                     }
                 ],
                 "Developer info": [
@@ -176,4 +176,4 @@ async def get_character(
     return {"data": filtered_characters}
 
 
-app.include_router(router, prefix='/tr_api')
+app.include_router(router)
