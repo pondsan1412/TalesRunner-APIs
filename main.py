@@ -176,4 +176,74 @@ async def get_character(
     return {"data": filtered_characters}
 
 
+<<<<<<< HEAD
+=======
+items_list = [
+    {
+        "head": [
+            {
+                "id": 1,
+                "name":"ghbank",
+                "desc": "ธอส สนับสนุนให้น้องๆรักการออมนะจ๊ะ",
+                "stats": [
+                    {
+                        "exp": "+300%",
+                        "special_ability": "คนที่สวมใส่ไอเทมชินนี้ เมื่อถูกเหยียบจะพึ่งไปข้างหน้าอย่างรวดเร็ว ส่วนคนที่เหยียบจะได้รับ tr bonus (สามารถเหยียบได้ 50 ครั้งต่อการแข่งขัน)",
+                        "exp_value": 300,
+                        "exp_percent": True
+                    }
+                ]
+            }
+        ],
+        "shirt": [
+            {
+                "id": 2,
+                "name":"songkran",
+                "desc": "ไอเทมวันสงกรานต์",
+                "stats": [
+                    {
+                        "TR": "+200%",
+                        "EXP": "+220%",
+                        "speed": "+1",
+                        "accel": "+2",
+                        "power": "+2",
+                        "ability": "เปอร์เซ็นในการแปลงร่างเป็นกิ้งค่า ด้วยไอเทมระเบิดแปลงกาย + 75%",
+                        "trigger_fury": "+18%",
+                        "duration_fury": "+18%",
+                        "reduce_duration_of_black_melon": "-12%",
+                        "protecting_when_attacked_by_chicken_penguin": "+12%",
+                        "protecting_from_lighting": "+25%",
+                        "gain_max_dash_by": "+15%",
+                        "gain_EXP_max_by": "+2200",
+                        "TR_value": 200,
+                        "TR_percent": True,
+                        "EXP_value": 220,
+                        "EXP_percent": True,
+                        "gain_max_dash_by_value": 15,
+                        "gain_max_dash_by_percent": True
+                    }
+                ]
+            }
+        ]
+    }
+]
+
+@router.get("/items")
+async def items(id: Optional[int] = None,name: Optional[str] = None):
+    def find_item_by_id(items_list, id,name):
+        results = []
+        for i in items_list:
+            for key, items in i.items():
+                for item in items:
+                    if item.get("id") == id:
+                        results.append({key: [item]})
+                    elif item.get("name") == name:
+                        results.append({key:[item]})
+        return results
+
+    # Get filtered items
+    filtered_items = find_item_by_id(items_list, id,name)
+    return {"data": filtered_items}
+
+>>>>>>> 34095e43a087df10337fe9dc6d95ffede81f7e94
 app.include_router(router)
